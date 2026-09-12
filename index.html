@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Fire Daily Free Tournaments</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #0f0f14;
+      color: #fff;
+      padding-bottom: 40px;
+    }
+    header {
+      background: linear-gradient(135deg, #ff5722, #e91e63);
+      padding: 18px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    }
+    header h1 {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    header p {
+      font-size: 13px;
+      color: #ffe0b2;
+      margin-top: 4px;
+    }
+    .container {
+      max-width: 550px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    .tournament-card {
+      background: #181822;
+      border: 1px solid #2a2a3d;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #2d2d40;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+    .card-title {
+      font-size: 17px;
+      font-weight: bold;
+      color: #ff7043;
+    }
+    .card-time {
+      font-size: 13px;
+      color: #aaa;
+    }
+    .match-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 8px;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .free-tag {
+      color: #00e676;
+      font-weight: bold;
+    }
+    .prize {
+      color: #ffeb3b;
+      font-weight: bold;
+    }
+    .btn-register {
+      width: 100%;
+      background: #00c853;
+      color: #000;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: 0.2s;
+    }
+    .btn-register:hover {
+      background: #00e676;
+    }
+    .success-box {
+      display: none;
+      margin-top: 14px;
+      background: #1e2c22;
+      border: 1px solid #00c853;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .success-box p {
+      font-size: 13px;
+      color: #c8e6c9;
+      margin-bottom: 10px;
+    }
+    .btn-whatsapp {
+      display: inline-block;
+      background: #25d366;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FF Free Tournaments</h1>
+    <p>No Entry Fee • Free Registration • Win Prizes</p>
+  </header>
+
+  <div class="container">
+    
+    <!-- Match 1: Lone Wolf -->
+    <div class="tournament-card">
+      <div class="card-header">
+        <span class="card-title">Lone Wolf (1v1)</span>
+        <span class="card-time">Today, 07:00 PM</span>
+      </div>
+      <div class="match-info">
+        <div>Entry: <b class="free-tag">FREE</b></div>
+        <div>Prize: <b class="prize">₹20 UPI / Redeem Code</b></div>
+        <div>Map: <b>Iron Cage</b></div>
+        <div>Format: <b>Best of 3</b></div>
+      </div>
+      <button class="btn-register" onclick="registerPlayer('Lone Wolf', 1)">Free Register</button>
+      <div class="success-box" id="box-1">
+        <p>Registration Done! Room ID aur Password lene ke liye WhatsApp group join karo:</p>
+        <a href="https://chat.whatsapp.com/" target="_blank" class="btn-whatsapp">Join WhatsApp Group</a>
+      </div>
+    </div>
+
+    <!-- Match 2: Clash Squad -->
+    <div class="tournament-card">
+      <div class="card-header">
+        <span class="card-title">Clash Squad (4v4)</span>
+        <span class="card-time">Today, 08:30 PM</span>
+      </div>
+      <div class="match-info">
+        <div>Entry: <b class="free-tag">FREE</b></div>
+        <div>Prize: <b class="prize">₹50 UPI / Squad</b></div>
+        <div>Map: <b>Bermuda</b></div>
+        <div>Format: <b>Squad Elimination</b></div>
+      </div>
+      <button class="btn-register" onclick="registerPlayer('Clash Squad', 2)">Free Register</button>
+      <div class="success-box" id="box-2">
+        <p>Registration Done! Room ID aur Password lene ke liye WhatsApp group join karo:</p>
+        <a href="https://chat.whatsapp.com/" target="_blank" class="btn-whatsapp">Join WhatsApp Group</a>
+      </div>
+    </div>
+
+    <!-- Match 3: Full Map BR -->
+    <div class="tournament-card">
+      <div class="card-header">
+        <span class="card-title">Full Map BR (Battle Royale)</span>
+        <span class="card-time">Today, 09:30 PM</span>
+      </div>
+      <div class="match-info">
+        <div>Entry: <b class="free-tag">FREE</b></div>
+        <div>Prize: <b class="prize">Booyah: ₹50 / Per Kill: ₹2</b></div>
+        <div>Map: <b>Purgatory</b></div>
+        <div>Format: <b>Solo Battle</b></div>
+      </div>
+      <button class="btn-register" onclick="registerPlayer('Full Map', 3)">Free Register</button>
+      <div class="success-box" id="box-3">
+        <p>Registration Done! Room ID aur Password lene ke liye WhatsApp group join karo:</p>
+        <a href="https://chat.whatsapp.com/" target="_blank" class="btn-whatsapp">Join WhatsApp Group</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function registerPlayer(modeName, id) {
+      const uid = prompt(`[${modeName}]\nApna Free Fire In-Game Name aur UID enter karo:`);
+      
+      if (!uid || uid.trim() === "") {
+        alert("Registration cancel: UID daalna zaroori hai.");
+        return;
+      }
+
+      // Success box display
+      document.getElementById(`box-${id}`).style.display = "block";
+      alert(`Registration Successful for ${modeName}!\nNeeche diye link se WhatsApp group join kar lo.`);
+    }
+  </script>
+</body>
+                       </html>
+        
