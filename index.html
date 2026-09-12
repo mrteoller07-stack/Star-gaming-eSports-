@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8" />
@@ -32,6 +32,17 @@
       font-size: 13px;
       color: #d1d5db;
       margin-top: 5px;
+    }
+    .discord-badge {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 5px 12px;
+      background: #1e1f29;
+      border: 1px solid #5865F2;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      color: #fff;
     }
     .container {
       max-width: 520px;
@@ -101,7 +112,8 @@
 
   <header>
     <h1>Star Gaming Tournaments</h1>
-    <p>Daily Tournaments • Discord Registration & Verification</p>
+    <p>Daily Tournaments • Discord Verification</p>
+    <div class="discord-badge">Admin Discord: @Rolex07708</div>
   </header>
 
   <div class="container">
@@ -160,7 +172,8 @@
   </div>
 
   <script>
-    const discordInviteLink = "https://discord.gg/QtQ4YDpzX"; 
+    const discordInviteLink = "https://discord.gg/QtQ4YDpzX";
+    const discordAdminID = "@Rolex07708";
 
     function joinViaDiscord(matchName, fee) {
       const uid = prompt(`[${matchName}]\nApna Free Fire UID aur Name enter karo:`);
@@ -170,10 +183,10 @@
         return;
       }
 
-      alert(`Details saved!\nAb Discord server par jakar payment verify karayein aur slot confirm karein.`);
+      alert(`Details saved!\nDiscord server par ja kar admin (${discordAdminID}) ko UID aur payment verify karayein.`);
       window.open(discordInviteLink, '_blank');
     }
   </script>
 </body>
-  </html>
-  
+</html>
+           
