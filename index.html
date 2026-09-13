@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8" />
@@ -17,7 +17,7 @@
       padding-bottom: 40px;
     }
     header {
-      background: linear-gradient(135deg, #5865F2, #1e1f29);
+      background: linear-gradient(135deg, #25d366, #128c7e);
       padding: 20px;
       text-align: center;
       box-shadow: 0 4px 15px rgba(0,0,0,0.6);
@@ -30,19 +30,8 @@
     }
     header p {
       font-size: 13px;
-      color: #d1d5db;
+      color: #e0f2f1;
       margin-top: 5px;
-    }
-    .discord-badge {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 5px 12px;
-      background: #1e1f29;
-      border: 1px solid #5865F2;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: bold;
-      color: #fff;
     }
     .container {
       max-width: 520px;
@@ -66,7 +55,7 @@
     .card-title {
       font-size: 17px;
       font-weight: bold;
-      color: #7289da;
+      color: #25d366;
     }
     .card-time {
       font-size: 13px;
@@ -87,10 +76,10 @@
       color: #4caf50;
       font-weight: bold;
     }
-    .btn-discord {
+    .btn-wa {
       width: 100%;
-      background: #5865F2;
-      color: #fff;
+      background: #25d366;
+      color: #0b141a;
       border: none;
       padding: 12px;
       border-radius: 8px;
@@ -103,8 +92,8 @@
       text-decoration: none;
       transition: 0.2s;
     }
-    .btn-discord:hover {
-      background: #4752c4;
+    .btn-wa:hover {
+      background: #20ba59;
     }
   </style>
 </head>
@@ -112,8 +101,7 @@
 
   <header>
     <h1>Star Gaming Tournaments</h1>
-    <p>Daily Tournaments • Discord Verification</p>
-    <div class="discord-badge">Admin Discord: @Rolex07708</div>
+    <p>Daily Tournaments • Pay & Register via WhatsApp</p>
   </header>
 
   <div class="container">
@@ -130,8 +118,8 @@
         <div>Map: <b>Iron Cage</b></div>
         <div>Mode: <b>Solo</b></div>
       </div>
-      <button class="btn-discord" onclick="joinViaDiscord('Lone Wolf (1v1)', '₹10')">
-        Join via Discord
+      <button class="btn-wa" onclick="joinViaWhatsApp('Lone Wolf (1v1)', '₹10')">
+        Pay & Register on WhatsApp
       </button>
     </div>
 
@@ -147,8 +135,8 @@
         <div>Map: <b>Bermuda</b></div>
         <div>Mode: <b>Squad</b></div>
       </div>
-      <button class="btn-discord" onclick="joinViaDiscord('Clash Squad (4v4)', '₹40')">
-        Join via Discord
+      <button class="btn-wa" onclick="joinViaWhatsApp('Clash Squad (4v4)', '₹40')">
+        Pay & Register on WhatsApp
       </button>
     </div>
 
@@ -164,18 +152,17 @@
         <div>Map: <b>Purgatory</b></div>
         <div>Mode: <b>Solo</b></div>
       </div>
-      <button class="btn-discord" onclick="joinViaDiscord('Full Map BR', '₹20')">
-        Join via Discord
+      <button class="btn-wa" onclick="joinViaWhatsApp('Full Map BR', '₹20')">
+        Pay & Register on WhatsApp
       </button>
     </div>
 
   </div>
 
   <script>
-    const discordInviteLink = "https://discord.gg/QtQ4YDpzX";
-    const discordAdminID = "@Rolex07708";
+    const adminWhatsAppNumber = "918999040540"; 
 
-    function joinViaDiscord(matchName, fee) {
+    function joinViaWhatsApp(matchName, fee) {
       const uid = prompt(`[${matchName}]\nApna Free Fire UID aur Name enter karo:`);
       
       if (!uid || uid.trim() === "") {
@@ -183,10 +170,13 @@
         return;
       }
 
-      alert(`Details saved!\nDiscord server par ja kar admin (${discordAdminID}) ko UID aur payment verify karayein.`);
-      window.open(discordInviteLink, '_blank');
+      const text = `Hello Admin, mujhe tournament join karna hai!%0A%0A🎮 Match: ${matchName}%0A💰 Entry Fee: ${fee}%0A🆔 UID/Name: ${uid}%0A%0APlease payment UPI bhej do.`;
+      const url = `https://wa.me/${adminWhatsAppNumber}?text=${text}`;
+      
+      window.open(url, '_blank');
     }
   </script>
 </body>
-</html>
+     </html>
+   
            
